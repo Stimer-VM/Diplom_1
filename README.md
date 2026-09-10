@@ -4,9 +4,17 @@
 
 ### Реализованные сценарии
 
-Созданы юнит-тесты, покрывающие классы `Bun`, `Burger`, `Ingredient`, `Database`
+Созданы юнит-тесты, покрывающие классы `Burger`
 
-Процент покрытия 100% (отчет: `htmlcov/index.html`)
+В тестах используются:
+- параметризация `pytest.mark.parametrize`;
+- моки `unittest.mock.Mock`.
+
+Покрыты все методы класса `Burger`.
+
+Процент покрытия класса `Burger` — **100%**.
+
+HTML-отчёт о покрытии создаётся в папке `htmlcov`.
 
 ### Структура проекта
 
@@ -17,8 +25,8 @@
 
 **Установка зависимостей**
 
-> `$ pip install -r requirements.txt`
+> `pip install -r requirements.txt`
 
 **Запуск автотестов и создание HTML-отчета о покрытии**
 
->  `$ pytest --cov=praktikum --cov-report=html`
+>  `python -m pytest --cov=praktikum.burger --cov-report=html`
